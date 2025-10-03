@@ -5,28 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Personal Web</title>
 
-    <!-- Kode CSS dari Bootstrap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    .artikel-img {
-    height: 200px;
-    object-fit: cover;
-  }
-  </style>
 
   <body>
-    <!-- Navbar (Menu Website) -->
     <section>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-custom"
+      >
         <div class="container">
-          <a class="navbar-brand" href="#">@saksipambayun</a>
+          <a class="navbar-brand text-blue-dark" href="#">@saksipambayun</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -65,26 +64,25 @@
       </nav>
     </section>
 
-    <!-- Bagian Banner -->
-    <section class="my-5">
+    <section class="my-5 pt-5">
       <div class="container py-5">
-        <div class="card border-0 bg-light rounded-5">
+        <div class="card border-0 bg-light rounded-5 banner-card">
           <div class="card-body p-4">
-            <div class="row">
+            <div class="row align-items-center">
               <div class="col-md-6">
-                <h5>Selamat datang di Personal Website</h5>
-                <h1><b>Ayun</b> Saksi Pambayun</h1>
+                <h5 class="text-blue-light">
+                  Selamat datang di Personal Website
+                </h5>
+                <h1 class="text-blue-dark"><b>Ayun</b> Saksi Pambayun</h1>
                 <p class="mb-0">Siswa Jurusan Rekayasa Perangkat Lunak</p>
                 <p>SMK Negeri 8 Jember</p>
               </div>
-             <div class="col-md-6 text-end">
-            <img
-    src="ayun.jpg"
-    class="img-fluid shadow-lg rounded-5"
-    alt="Foto Profile"
-    style="width: 300px; height: 300px; object-fit: cover; margin-right: 20px;"
-  />
-</div>
+              <div class="col-md-6 text-center text-md-end">
+                <img
+                  src="ayun.jpg"
+                  class="img-fluid shadow-lg rounded-circle profile-img"
+                  alt="Foto Profile"
+                />
               </div>
             </div>
           </div>
@@ -92,23 +90,22 @@
       </div>
     </section>
 
-    <!-- Bagian Riwayat Hidup -->
     <section class="my-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-6" id="riwayat-pendidikan">
-            <div class="card rounded-4 border-warning">
+          <div class="col-md-6 mb-4 mb-md-0" id="riwayat-pendidikan">
+            <div class="card rounded-4 border-warning custom-card">
               <div class="card-body p-4">
-                <h3 class="mb-4">Riwayat Pendidikan</h3>
+                <h3 class="mb-4 text-blue-dark">Riwayat Pendidikan</h3>
 
-                <div class="card mb-3">
+                <div class="card mb-3 education-item">
                   <div class="card-body">
                     <h5>SMKN 8 Jember</h5>
                     <p>Jurusan Rekayasa Perangkat Lunak</p>
                     <small>2024 - sekarang</small>
                   </div>
                 </div>
-                <div class="card">
+                <div class="card education-item">
                   <div class="card-body">
                     <h5>SMPN 1 Semboro</h5>
                     <small>2012 - 2015</small>
@@ -118,13 +115,17 @@
             </div>
           </div>
           <div class="col-md-6" id="keahlian">
-            <div class="card rounded-4 border-primary">
+            <div class="card rounded-4 border-primary custom-card">
               <div class="card-body p-4">
-                <h3 class="mb-4">Keahlian</h3>
+                <h3 class="mb-4 text-blue-dark">Keahlian</h3>
 
-                <div class="alert alert-primary">Java</div>
-                <div class="alert alert-primary">HTML/CSS/Javascript</div>
-                <div class="alert alert-primary">Framework Bootstrap</div>
+                <div class="alert alert-primary skill-badge">Java</div>
+                <div class="alert alert-primary skill-badge">
+                  HTML/CSS/Javascript
+                </div>
+                <div class="alert alert-primary skill-badge">
+                  Framework Bootstrap
+                </div>
               </div>
             </div>
           </div>
@@ -132,57 +133,64 @@
       </div>
     </section>
 
-    <!-- Bagian Artikel -->
-   <!-- Bagian Artikel -->
-<section class="my-5" id="artikel">
-  <div class="container">
-    <h3 class="mb-3">Artikel Saya</h3>
-    <p>Cerita yang saya bagikan</p>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="UI UX DESIGN _ Figma.jpg" class="card-img-top artikel-img" alt="Artikel 1" />
-          <div class="card-body">
-            <h5 class="card-title">Tips dan Trik Belajar Web</h5>
-            <a href="#" class="btn btn-primary">Baca Artikel</a>
+    <section class="my-5" id="artikel">
+      <div class="container">
+        <h3 class="mb-3 text-blue-dark">Artikel Saya</h3>
+        <p>Cerita yang saya bagikan</p>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 article-card">
+              <img
+                src="UI UX DESIGN _ Figma.jpg"
+                class="card-img-top artikel-img"
+                alt="Artikel 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tips dan Trik Belajar Web</h5>
+                <a href="#" class="btn btn-dark-blue">Baca Artikel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 article-card">
+              <img
+                src="962bd85e-c6a9-4546-837d-99d5e9d593ba.jpg"
+                class="card-img-top artikel-img"
+                alt="Artikel 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tips dan Trik Belajar Web</h5>
+                <a href="#" class="btn btn-dark-blue">Baca Artikel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 article-card">
+              <img
+                src="02f127af-0feb-4081-a8e6-b5996952d429.jpg"
+                class="card-img-top artikel-img"
+                alt="Artikel 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tips dan Trik Belajar Web</h5>
+                <a href="#" class="btn btn-dark-blue">Baca Artikel</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="962bd85e-c6a9-4546-837d-99d5e9d593ba.jpg" class="card-img-top artikel-img" alt="Artikel 2" />
-          <div class="card-body">
-            <h5 class="card-title">Tips dan Trik Belajar Web</h5>
-            <a href="#" class="btn btn-primary">Baca Artikel</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="02f127af-0feb-4081-a8e6-b5996952d429.jpg" class="card-img-top artikel-img" alt="Artikel 3" />
-          <div class="card-body">
-            <h5 class="card-title">Tips dan Trik Belajar Web</h5>
-            <a href="#" class="btn btn-primary">Baca Artikel</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Bagian Hubungi Saya -->
     <section class="my-5" id="hubungi-saya">
       <div class="container text-center">
-        <div class="p-4 border rounded-4 shadow-sm">
-          <h3>Hubungi Saya!</h3>
-          <p>Jika ada keperluan, silahkan hubungi saya di</p>
-          <!-- ganti 6281234567890 dengan nomor whatsappmu -->
+        <div class="p-4 border rounded-4 shadow-sm contact-card">
+          <h3 class="text-blue-dark">Hubungi Saya!</h3>
+          <p>Jika ada keperluan, silakan hubungi saya di</p>
           <a
             href="https://wa.me/6281234567890"
-            class="btn btn-success"
+            class="btn btn-whatsapp"
             target="_blank"
             >Whatsapp</a
           >
@@ -190,8 +198,7 @@
       </div>
     </section>
 
-    <!-- Bagian Footer -->
-    <footer class="bg-dark text-white">
+    <footer class="bg-blue-dark text-white">
       <div class="container text-center p-3">
         <p class="mb-0">Dibuat oleh <b>Copas Dari Mas Rahmat</b></p>
       </div>

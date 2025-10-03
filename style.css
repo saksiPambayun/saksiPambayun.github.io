@@ -1,100 +1,183 @@
+/* Definisikan variabel warna untuk gradasi biru */
+:root {
+  --blue-light: #52a8ff;
+  --blue-dark: #004d99;
+  --primary-blue: #0d6efd;
+  --background-gradient: linear-gradient(
+    135deg,
+    var(--blue-light),
+    var(--primary-blue)
+  );
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
 
-/* navbar */
-.navbar {
+/* Warna Teks Kustom */
+.text-blue-dark {
+  color: var(--blue-dark) !important;
+}
+.text-blue-light {
+  color: var(--blue-light) !important;
+}
+.bg-blue-dark {
+  background-color: var(--blue-dark) !important;
+}
+
+/* --- Navbar --- */
+.navbar-custom {
+  background: linear-gradient(to right, var(--blue-light), #fff) !important;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 .navbar-brand {
   font-weight: 700;
-  color: #0d6efd !important;
+  color: var(--blue-dark) !important;
 }
 .nav-link {
   font-weight: 500;
-  transition: 0.3s;
+
+  transition: color 0.3s ease-in-out, transform 0.2s;
 }
-.nav-link:hover {
-  color: #0d6efd !important;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--blue-dark) !important;
+
+  transform: translateY(-2px);
+  text-shadow: 0 0 5px rgba(0, 77, 153, 0.3);
 }
 
-/* banner */
-.card.border-0.bg-light {
-  background: linear-gradient(135deg, #fefefe, #f2f7ff);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+/* --- Bagian Banner --- */
+.banner-card {
+  background: linear-gradient(135deg, #fefefe, #e8f3ff) !important;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15) !important;
 }
-.card-body h1 {
+.banner-card h1 {
   font-size: 2.5rem;
-  color: #0d6efd;
+  color: var(--blue-dark);
 }
-.card-body h5 {
+.banner-card h5 {
   font-weight: 600;
   margin-bottom: 15px;
 }
-.card-body p {
-  font-size: 1.1rem;
-  color: #555;
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 5px solid var(--blue-light);
+
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 10px rgba(0, 77, 153, 0.1), 0px 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out;
+}
+.profile-img:hover {
+  transform: rotate(5deg) scale(1.03);
 }
 
-/* riwayat & keahlian */
-.card.rounded-4 {
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
+/* --- Riwayat & Keahlian --- */
+.custom-card {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-out, box-shadow 0.4s;
+  border: 1px solid rgba(0, 77, 153, 0.1) !important;
 }
-.card.rounded-4:hover {
-  transform: translateY(-5px);
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 30px rgba(0, 77, 153, 0.2);
 }
-.alert {
+.education-item {
+  border: 1px solid var(--blue-light) !important;
+  transition: background-color 0.3s;
+}
+.education-item:hover {
+  background-color: #f0f8ff;
+}
+.alert.skill-badge {
   border-radius: 30px;
   text-align: center;
   font-weight: 500;
+
+  background-image: linear-gradient(
+    to right,
+    var(--blue-light),
+    var(--primary-blue)
+  );
+  color: white;
+  border: none;
+  transition: transform 0.3s;
+}
+.alert.skill-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 77, 153, 0.4);
 }
 
-/* artikel */
+/* --- Bagian Artikel --- */
 .artikel-img {
   height: 200px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
-.card.h-100 {
+.article-card {
   border: none;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.4s ease-out, box-shadow 0.4s;
+  border: 1px solid #eee;
 }
-.card.h-100:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+.article-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
 }
 .card-title {
   font-size: 1.2rem;
   font-weight: 600;
+  color: var(--blue-dark);
 }
-.btn-primary {
+
+/* Tombol Kustom */
+.btn-dark-blue {
   border-radius: 20px;
   padding: 8px 18px;
+
+  background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
+  border: none;
+  transition: opacity 0.3s, transform 0.2s;
+}
+.btn-dark-blue:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
-/* hubungi saya */
-#hubungi-saya .border {
-  background: #fff;
+/* --- Hubungi Saya --- */
+.contact-card {
+  background: linear-gradient(135deg, #f2f7ff, #ffffff);
   border: none !important;
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
+  box-shadow: 0px 6px 18px rgba(0, 77, 153, 0.15);
+  transition: transform 0.4s;
 }
-#hubungi-saya .border:hover {
-  transform: scale(1.02);
+.contact-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 25px rgba(0, 77, 153, 0.25);
 }
-.btn-success {
+.btn-whatsapp {
   border-radius: 20px;
   font-weight: 500;
+
+  background: linear-gradient(to right, #25d366, #128c7e);
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-whatsapp:hover {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(37, 211, 102, 0.5);
 }
 
-/* footer */
+/* --- Footer --- */
 footer {
-  background: #0d6efd;
+  background-color: var(--blue-dark) !important;
   color: #fff;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
